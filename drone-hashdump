@@ -18,7 +18,6 @@ from docopt import docopt
 from pylair import models
 from pylair import client
 
-
 def main():
     arguments = docopt(__doc__, version='drone-hashdump 1.0.2')
     lair_url = ''
