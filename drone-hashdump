@@ -51,10 +51,10 @@ def main():
         exit(1)
     for line in lines:
         entry = line.split(":")
-        print entry
         credential = dict(models.credential)
         credential['projectId'] = project_id
         credential['username'] = entry[0]
+        credential['format'] = "LM:NTLM"
         credential['hash'] = entry[2]+":"+entry[3] 
 
         project['credentials'].append(credential)
